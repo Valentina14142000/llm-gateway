@@ -1,4 +1,3 @@
-
 # High-Throughput LLM Gateway 
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
@@ -15,11 +14,12 @@ A production-grade middleware gateway designed to optimize enterprise LLM worklo
 ```mermaid
 graph TD
     A[Incoming Prompt] --> B[Semantic Cache Lookup]
-    B -->|Cache Hit (Similarity >= 0.85)| C[Instant Cached Response]
+    B -->|"Cache Hit (Similarity >= 0.85)"| C[Instant Cached Response]
     B -->|Cache Miss| D[Dynamic Router Classification]
     D -->|Complex Reasoning| E[Frontier LLM API]
     D -->|Standard Task| F[Local vLLM Model]
-    E & F --> G[Store in Semantic Cache]
+    E --> G[Store in Semantic Cache]
+    F --> G
     G --> H[API Response]
 ```
 

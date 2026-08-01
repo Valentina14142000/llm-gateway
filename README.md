@@ -10,7 +10,7 @@ A production-grade middleware gateway designed to optimize enterprise LLM worklo
 
 ---
 
-## 🏗️ System Architecture & Workflow
+##  System Architecture & Workflow
 
 ```mermaid
 graph TD
